@@ -4,7 +4,7 @@ Liang Xin, Wen Song, Zhiguang Cao, Jie Zhang. NeuroLKH: Combining Deep Learning 
 Please cite our paper if this code is useful for your work.
 ```
 @inproceedings{xin2021neurolkh,
-    author = {Xin, Liang and Cao, Zhiguang and Song, Wen and Zhang, Jie},
+    author = {Xin, Liang and Song, Wen and Cao, Zhiguang and Zhang, Jie},
     booktitle = {Advances in Neural Information Processing Systems},
     title = {NeuroLKH: Combining Deep Learning Model with Lin-Kernighan-Helsgaun Heuristic for Solving the Traveling Salesman Problem},
     volume = {34},
