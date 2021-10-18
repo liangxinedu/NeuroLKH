@@ -1,5 +1,5 @@
 # NeuroLKH: Combining Deep Learning Model with Lin-Kernighan-Helsgaun Heuristic for Solving the Traveling Salesman Problem
-Liang Xin, Wen Song, Zhiguang Cao, Jie Zhang. NeuroLKH: Combining Deep Learning Model with Lin-Kernighan-Helsgaun Heuristic for Solving the Traveling Salesman Problem, 35th Conference on Neural Information Processing Systems (NeurIPS), 2021.
+Liang Xin, Wen Song, Zhiguang Cao, Jie Zhang. NeuroLKH: Combining Deep Learning Model with Lin-Kernighan-Helsgaun Heuristic for Solving the Traveling Salesman Problem, 35th Conference on Neural Information Processing Systems (NeurIPS), 2021. [[pdf]](http://arxiv.org/abs/2110.07983)
 
 Please cite our paper if this code is useful for your work.
 ```
