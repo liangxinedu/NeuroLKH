@@ -25,11 +25,11 @@ int main(int argc, char *argv[])
     if (GeneratingFeature && ProblemType == TSP) {
 	printf ("Generating Features\n");
 	featureGenerate();
-	return;
+	return 0;
     }
     if (GeneratingFeature) {
 	CreateCandidateSet();
-	return;
+	return 0;
     }
     if (SubproblemSize > 0) {
         if (DelaunayPartitioning)
