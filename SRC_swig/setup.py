@@ -1,9 +1,12 @@
 from distutils.core import setup, Extension
 import glob
+import os
+
+# Change to script's directory to get all file .c
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 FILES = glob.glob("*.c")
-
-print (FILES)
+print(f"FILES: {FILES} with len: {len(FILES)}")
 
 # Third-party modules - we depend on numpy for everything
 import numpy
@@ -22,18 +25,23 @@ except AttributeError:
 # print (FILESN)
 # FILESN=["LKH.i", "LKHmain.c"]
 # FILESN=["LKHmain.c"]
-ARGS = ['-O3', '-Wall', '-IINCLUDE', '-DTWO_LEVEL_TREE', '-g']
+
+# allows large model and redefined common
+ARGS = ["-O3", "-Wall", "-IINCLUDE", "-DTWO_LEVEL_TREE", "-g", "-mcmodel=large", "-fcommon"]
 # ARGS = []
 
-example_module = Extension('_LKH',
-                           sources=FILES,
-                           include_dirs=["INCLUDE", numpy_include],
-                           extra_compile_args=ARGS,)
+example_module = Extension(
+    "_LKH",
+    sources=FILES,
+    include_dirs=["INCLUDE", numpy_include],
+    extra_compile_args=ARGS,
+)
 
-setup(name='LKH',
-      version='0.1',
-      author="SWIG Docs",
-      description="""Simple swig example from docs""""",
-      ext_modules=[example_module],
-      py_modules=["LKH"],
-      )
+setup(
+    name="LKH",
+    version="0.1",
+    author="SWIG Docs",
+    description="""Simple swig example from docs""" "",
+    ext_modules=[example_module],
+    py_modules=["LKH"],
+)
