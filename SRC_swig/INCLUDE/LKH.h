@@ -78,6 +78,9 @@ int SavedD[100000000];
 int GeneratingFeatures;
 int NeuroLKH;
 int GettingNodeDegree;
+extern int ParetoLabExplicitCosts;
+void ParetoLabInstallExplicitCosts(double *invec, int length, int num_nodes);
+void ParetoLabWriteTour(double *result, int length);
 
 int n_nodes;
 

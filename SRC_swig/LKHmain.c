@@ -25,6 +25,7 @@ long long main(int deep, int num_runs, int r_seed, int num_nodes, double* invec,
     MergeWithTour = Recombination == IPT ? MergeWithTourIPT :
         MergeWithTourGPX2;
     ReadProblem(invec);
+    ParetoLabInstallExplicitCosts(invec, n, num_nodes);
     if (SubproblemSize > 0) {
         if (DelaunayPartitioning)
             SolveDelaunaySubproblems();
@@ -247,5 +248,6 @@ long long main(int deep, int num_runs, int r_seed, int num_nodes, double* invec,
         SOP_Report(BestCost);
     }
     // printff("\n");
+    ParetoLabWriteTour(return_result, n);
     return BestCost;
 }

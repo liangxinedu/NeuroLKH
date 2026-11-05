@@ -61,9 +61,12 @@ int ReadCandidates(int MaxCandidates, double* invec)
                    (Candidate *) calloc(Count + 1, sizeof(Candidate)));
         for (j = 0; j < Count; j += 1) {
 	    Id = (int) invec[n_nodes * 2 + i * 5 + j] + 1;
+	    if (Id < 1 || Id > Dimension)
+	        continue;
 	    To = &NodeSet[Id];
 	    Alpha = j * 100;
-	    int tmp = SavedD[From->Id * n_nodes - n_nodes + To->Id - 1];
+	    int tmp = ParetoLabExplicitCosts ? C(From, To) :
+	        SavedD[From->Id * n_nodes - n_nodes + To->Id - 1];
 	    AddCandidate(From, To, tmp, Alpha);
         }
     }

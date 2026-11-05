@@ -22,7 +22,7 @@ except AttributeError:
 # print (FILESN)
 # FILESN=["LKH.i", "LKHmain.c"]
 # FILESN=["LKHmain.c"]
-ARGS = ['-O3', '-Wall', '-IINCLUDE', '-DTWO_LEVEL_TREE', '-g']
+ARGS = ['-O3', '-Wall', '-IINCLUDE', '-DTWO_LEVEL_TREE', '-g', '-fcommon']
 # ARGS = []
 
 example_module = Extension('_LKH',
